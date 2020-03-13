@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - 2025-4</title>
+<style>
+ol{
+  background:gold;
+}
+
+.correct{
+  background:green;
+}
+
+.incorrect{
+  background:red;
+}
+</style>
+</head>
+<body translate="no">
+<h1>Questions</h1>
+<ol>
+<li>What is the best color?<input data-correct="Orange></li> 
+  <li>Can you count to ten?<input data-correct=" 5"></li>
+<li> Is the world round? <input data-correct="yes"></li>
+<li> What is the Nike slogan? <input data-correct="Just Do It"></li>
+<li>What is the color of lemon juice?<input data-correct="yellow"></li>
+<li>Who is the best basketball player?<input data-correct="Lebron James">
+<li>What covers majority of Earth?<input data-correct="water"></li>
+<li>Who is our president?<input data-correct="Donald Trump"></li>
+<li>What is the saas colors?<input data-correct="Red and White">
+</li> <li>What lives in the ocean?<input data-correct="fish">
+</li> <li>Is Global warming real?<input data-correct="Yes"></li>
+</ol>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script id="rendered-js">
+console.clear();
+console.log("hello universe!")
+
+$("input").change(onChange);
+
+function onChange(evt){
+  
+ let correct= $(this).data("correct");
+  let response = $(this).val();
+  console.log(correct,response)
+  if(correct == response){
+    console.log("answer correct")
+    $(this).removeClass("incorrect").addClass("correct");
+  } else{
+    console.log("answer incorrect");
+     $(this).removeClass("correct").addClass("incorrect");
+
+  }
+  
+}
+    </script>
+</body>
+</html>
